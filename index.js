@@ -5,14 +5,12 @@ var transformer = require('./lib/transformer');
 var buffs;
 var finalBuffer;
 
-// Read bitmap1.bmp to Buffer "bitmap"
-var bitmap = fs.readFile('bitmap1.bmp', function(error, data){
+// Read bitmap1.bmp
+fs.readFile('bitmap1.bmp', function(error, data){
   if (error) console.log(error);
   buffs = reader.readBitmap(data);
 
-  // Run a transform
-  
-
+  // Concatenate list of buffers back into a single one
   finalBuffer = Buffer.concat(buffs);
 
   // Finally, save the output to an external file
@@ -21,5 +19,3 @@ var bitmap = fs.readFile('bitmap1.bmp', function(error, data){
     console.log("Saved");
   });
 });
-
-
