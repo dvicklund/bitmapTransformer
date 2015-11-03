@@ -2,8 +2,6 @@
 var fs = require('fs');
 var reader = require('./lib/readBitmap');
 var transformer = require('./lib/transformer');
-var args = process.argv;
-console.log(args);
 var buffs;
 var finalBuffer;
 
