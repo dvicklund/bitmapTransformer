@@ -1,7 +1,6 @@
 // Import filesystem module
 var fs = require('fs');
 var reader = require('./lib/readBitmap');
-var transformer = require('./lib/transformer');
 var buffs;
 var finalBuffer;
 
